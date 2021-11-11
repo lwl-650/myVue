@@ -1,13 +1,56 @@
 .HeadTitle {
   color: red;
-  max-width: 100%;
-  min-width: 1000px;
+  width: 100%;
+  min-width: 1100px;
   height: 180px;
   border: 1px solid red;
+  position: relative;
+}
+.HeadTitle img {
+  width: 100%;
+  min-width: 1100px;
+  height: 180px;
+  display: block;
 }
 .HeadTitle .head {
-  max-width: 100%;
-  min-width: 1000px;
+  width: 100%;
+  min-width: 1100px;
   height: 60px;
   border: 1px solid red;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.HeadTitle .head .left {
+  width: 35%;
+  height: 60px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-evenly;
+}
+.HeadTitle .head .left .left_list {
+  border: 1px solid red;
+  width: 90px;
+  text-align: center;
+  line-height: 60px;
+}
+.HeadTitle .head .cent {
+  width: 30%;
+  height: 60px;
+  border: 1px solid red;
+}
+.HeadTitle .head .right {
+  width: 35%;
+  height: 60px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-evenly;
+}
+.HeadTitle .head .right .left_list {
+  border: 1px solid red;
+  width: 90px;
+  text-align: center;
+  line-height: 60px;
 }

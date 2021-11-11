@@ -1,10 +1,17 @@
 <template>
   <div class="HeadTitle">
+    <!-- <img src="../../../public/img/head.png" alt=""> -->
     <div class="head">
-6867868
+      <div class="left">
+        <div class="left_list" v-for="(item,index) in list" :key="index">{{item.name}}</div>
+      </div>
+      <div class="cent"></div>
+      <div class="right">
+        <div class="left_list" v-for="(item,index) in list" :key="index">{{item.name}}</div>
+      </div>
     </div>
  
-<h1 >{{msg}}</h1>
+
    
   </div>
 </template>
@@ -17,19 +24,7 @@ export default Title
 </script>
 
 
-<style lang="less" scoped>
-    //  @import url("./Title.less");
-    .HeadTitle{
-    //  color:red;
-     max-width: 100%;
-     min-width: 1000px;
-     height: 180px;
+<style src="./Title.css" long="less"  scoped >
 
-     .head{
-       max-width: 100%;
-     min-width: 1000px;
-     height: 60px;
-
-     }
-   }
+    
 </style> 
