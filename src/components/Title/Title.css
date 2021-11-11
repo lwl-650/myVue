@@ -1,0 +1,13 @@
+.HeadTitle {
+  color: red;
+  max-width: 100%;
+  min-width: 1000px;
+  height: 180px;
+  border: 1px solid red;
+}
+.HeadTitle .head {
+  max-width: 100%;
+  min-width: 1000px;
+  height: 60px;
+  border: 1px solid red;
+}
