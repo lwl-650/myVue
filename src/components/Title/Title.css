@@ -3,7 +3,7 @@
   width: 100%;
   min-width: 1100px;
   height: 180px;
-  border: 1px solid red;
+  border: none;
   position: relative;
 }
 .HeadTitle img {
@@ -16,7 +16,7 @@
   width: 100%;
   min-width: 1100px;
   height: 60px;
-  border: 1px solid red;
+  border: none;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -26,12 +26,12 @@
 .HeadTitle .head .left {
   width: 35%;
   height: 60px;
-  border: 1px solid red;
+  border: none;
   display: flex;
   justify-content: space-evenly;
 }
 .HeadTitle .head .left .left_list {
-  border: 1px solid red;
+  border: none;
   width: 90px;
   text-align: center;
   line-height: 60px;
@@ -39,17 +39,17 @@
 .HeadTitle .head .cent {
   width: 30%;
   height: 60px;
-  border: 1px solid red;
+  border: none;
 }
 .HeadTitle .head .right {
   width: 35%;
   height: 60px;
-  border: 1px solid red;
+  border: none;
   display: flex;
   justify-content: space-evenly;
 }
 .HeadTitle .head .right .left_list {
-  border: 1px solid red;
+  border: none;
   width: 90px;
   text-align: center;
   line-height: 60px;

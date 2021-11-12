@@ -37,7 +37,7 @@ export default defineComponent({
     onMounted(() => {
       axios.get('/xyz/get')
         .then(res => {
-          console.log(res)
+          console.log(res.data)
           // data.msg = res.data
         }).catch(err => {
           console.log(err);
