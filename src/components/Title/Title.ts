@@ -35,13 +35,20 @@ export default defineComponent({
 
 
     onMounted(() => {
-      // axios.post('/api/user')
-      //   .then(res => {
-      //     console.log(res)
-      //     data.msg = res.data
-      //   }).catch(err => {
-      //     console.log(err);
-      //   })
+      axios.get('/xyz/get')
+        .then(res => {
+          console.log(res)
+          // data.msg = res.data
+        }).catch(err => {
+          console.log(err);
+        })
+        axios.post('/api/user')
+        .then(res => {
+          console.log(res.data)
+          // data.msg = res.data
+        }).catch(err => {
+          console.log(err);
+        })
 
     });
 
