@@ -11,10 +11,12 @@ import router from './router'
 import store from './store'
 
 
+const app=createApp(App)
+import { Button, Select } from 'element-ui';
+app.component(Button.name, Button)
 
 
-createApp(App)
-.use(store)
-.use(router)
-.use(ElementPlus)
-.mount('#app')
+app.use(store)
+app.use(router)
+app.use(ElementPlus)
+app.mount('#app')

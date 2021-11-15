@@ -19,15 +19,15 @@ export default defineComponent({
           name: "主页"
         },
         {
-          name: "主页"
+          name: "番剧"
         }, {
-          name: "主页"
+          name: "直播"
         }, {
-          name: "主页"
+          name: "漫画"
         }, {
-          name: "主页"
+          name: "我的"
         }, {
-          name: "主页"
+          name: "小程序"
         }
       ]
     });

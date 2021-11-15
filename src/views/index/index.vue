@@ -1,10 +1,11 @@
 <template>
   <div class="index">
    <Title/>
-   <h1>{{age}}</h1>
+   <Listdirectory/>
    <div class="login">
      <img src="../../../public/img/qq.jpg" alt="">
      <div>qq登录</div>
+   
    </div>
   </div>
 </template>

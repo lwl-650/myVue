@@ -1,6 +1,6 @@
 <template>
   <div class="HeadTitle">
-    <!-- <img src="../../../public/img/head.png" alt=""> -->
+    <img src="../../../public/img/head.png" alt="">
     <div class="head">
       <div class="left">
         <div class="left_list" v-for="(item,index) in list" :key="index">{{item.name}}</div>
