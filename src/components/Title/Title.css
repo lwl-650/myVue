@@ -6,7 +6,7 @@
   border: none;
   position: relative;
 }
-.HeadTitle img {
+.HeadTitle .HeadTitle_img {
   width: 100%;
   min-width: 1100px;
   height: 180px;
@@ -48,9 +48,17 @@
   display: flex;
   justify-content: space-evenly;
 }
-.HeadTitle .head .right .left_list {
+.HeadTitle .head .right .title_img {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+}
+.HeadTitle .head .right .right_list {
   border: none;
-  width: 90px;
+  width: 120px;
+  height: 50px;
   text-align: center;
   line-height: 60px;
+  display: flex;
+  justify-content: center;
 }

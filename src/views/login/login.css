@@ -1,0 +1,22 @@
+.take {
+  width: 900px;
+  height: 500px;
+  margin: 0 auto;
+  border: none;
+}
+.take .qqlogin {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  border: 1px solid #269832;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+.take .qqlogin .qq {
+  font-size: 16px;
+}
+.take .qqlogin img {
+  width: 20px;
+  height: 20px;
+}

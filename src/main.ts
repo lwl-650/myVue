@@ -12,8 +12,8 @@ import store from './store'
 
 
 const app=createApp(App)
-import { Button, Select } from 'element-ui';
-app.component(Button.name, Button)
+// import { Button, Select } from 'element-ui';
+// app.component(Button.name, Button)
 
 
 app.use(store)

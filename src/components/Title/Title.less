@@ -1,3 +1,4 @@
+// @border:1px solid red;
 @border:none;
 .HeadTitle{
      color:#ffffff;
@@ -6,7 +7,7 @@
      height: 180px;
      border: @border;
      position: relative;
-     img{
+     .HeadTitle_img{
       width: 100%;
       min-width: 1100px;
       height: 180px;
@@ -34,6 +35,7 @@
          width: 90px;
          text-align: center;
          line-height: 60px;
+        
        }
      }
      .cent{
@@ -47,11 +49,21 @@
       border: @border;
       display: flex;
       justify-content: space-evenly;
-      .left_list{
+      .title_img{
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        // position: absolute;
+      }
+      .right_list{
         border: @border;
-        width: 90px;
+        width: 120px;
+        height: 50px;
         text-align: center;
         line-height: 60px;
+        display: flex;
+        justify-content: center;
+      
       }
      }
      }
