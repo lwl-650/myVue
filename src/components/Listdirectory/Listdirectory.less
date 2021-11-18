@@ -4,40 +4,88 @@
 .Listdirectory{
   width: 1500px;
   min-width: 1100px;
-  height: 240px;
+  height: 300px;
   border: @border;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  .swip{
-      min-width: 400px;
-      width: 550px;
+  // display: flex;
+  // justify-content: space-between;
+  .listR{
+    width:1500px;
+    height: 60px;
+    border: @border;
+       display: flex;
+     justify-content: space-between;
+     align-items: center;
+      .el-tag{
+        display: block;
+        // margin-top: 15px !important;
+        // margin-left: 21px !important;
+    }
+    }
+    .downlist{
+      width: 1500px;
+      height: 240px;
+      display: flex;
+      justify-content: space-between;
+      .swip{
+        min-width: 400px;
+        width: 550px;
+        height: 240px;
+        border: @border;
+        .el-carousel__item  {
+           border: @border;
+           width: 550px;
+           height: 240px;
+           min-width: 400px;
+           .el_img{
+               width: 550px;
+               height: 240px;
+               min-width: 400px;
+           }
+        }
+    }
+    .other{
+      width: 900px;
       height: 240px;
       border: @border;
-      .el-carousel__item  {
-         border: @border;
-         width: 550px;
-         height: 240px;
-         min-width: 400px;
-         .el_img{
-             width: 550px;
-             height: 240px;
-             min-width: 400px;
-         }
-        //  /deep/.el-carousel__indicators--outside{
-        //      position: absolute !important;
-        //  }
+      display: flex;
+      justify-content: space-between;
+      .ssq{
+        width: 440px;
+        height: 240px;
+       border: @border;
+       .ssq_num{
+width: 440px;
+height: 60px;
+border: @border;
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+.num_a{
+  width: 40px;
+  height: 40px;
+  // border: @border;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: red;
+  font-size: 20px;
+}
+.num_a:nth-child(7){
+  background-color: #1C74AA;
+}
+       }
+       
       }
-    
-  }
-  .listR{
-      width: 900PX;
-      height: 240PX;
-      border: @border;
-      .el-tag{
-        margin-top: 20px !important;
-          margin-left: 20px !important;
+      .music{
+        width: 440px;
+        height: 240px;
+       border: @border;
+      }
     }
+    }
+     
   }
   
-}
