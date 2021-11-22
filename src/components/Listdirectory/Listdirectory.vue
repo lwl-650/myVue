@@ -20,25 +20,25 @@
         </el-carousel>
       </div>
       <div class="other">
-          <div class="ssq">
-            <div class="ssq_num">
-              <div class="num_a">01</div>
-              <div class="num_a">02</div>
-              <div class="num_a">03</div>
-              <div class="num_a">04</div>
-              <div class="num_a">05</div>
-              <div class="num_a">06</div>
-              <div class="num_a">07</div>
+          <div class="other_a"></div>
+          <div class="other_b">
+            <div class="getTime">
+              <div>2021.11.22</div>
+              <div>第122期(当期)</div>
             </div>
-            <div class="redballyes">
-              <div class="red_text">本期红球推荐{{redBall.length}}码：</div>
-              <div class="red_arr">
-                <div class="red_ball" v-for="item in redBall" :key="item">{{item}}</div>
-                <div class="red_ball" v-for="item in redBall" :key="item">{{item}}</div>
-              </div>
+            <div class="ssq">
+              <div style="font-size:18px;font-weight: bold;">本期开奖：</div>
+              <div class="ssq_num" v-for="item in ap" :key="item">{{item}}</div>
+            </div>
+            <div class="tuiTime">
+              <div>第123期(下期)</div>
+            </div>
+            <div class="tuissq">
+              <div style="font-size:18px;font-weight: bold;font-size: 14px;">推荐红球{{redBall.length}}码：</div>
+              <div class="tui_ball" v-for="item in redBall" :key="item">{{item}}</div>
+              <div class="tui_ball" v-for="item in redBall" :key="item">{{item}}</div>
             </div>
           </div>
-          <div class="music"></div>
       </div>
     </div>
   </div>
@@ -71,9 +71,10 @@ export default defineComponent({
         { type: "danger", label: "Webpack" },
         { type: "warning", label: "React" },
         { type: "", label: "node.js" },
+        { type: "success", label: "git" }
       ],
       redBall:[]as any[],
-      ap:[1,4,6,14,20,28],
+      ap:[1,4,6,14,20,28,2],
     });
    
     console.log(demo.Sumsum(1,4,6,14,20,28).data)

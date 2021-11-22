@@ -14,8 +14,13 @@ const routes: Array<RouteRecordRaw> = [
     name: 'login',
     component: () => import(/* webpackChunkName: "login" */ '../views/login/login.vue'),
     
+  },
+  {
+    path: '/richText',
+    name: 'richText',
+    component: () => import(/* webpackChunkName: "login" */ '../views/richText/richText.vue'),
+    
   }
- 
 ]
 
 const router = createRouter({

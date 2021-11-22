@@ -61,74 +61,75 @@
       display: flex;
       justify-content: space-between;
 
-      .ssq {
+      .other_a {
         width: 48%;
         min-width: 350px;
         height: 240px;
         border: @border;
-        background-color: #EAF4E5;
-
-        .ssq_num {
-          width: 100%;
-          height: 60px;
-          border: @border;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-
-          .num_a {
-            width: 40px;
-            height: 40px;
-            // border: @border;
-            line-height: 38px;
-            text-align: center;
-            border-radius: 50%;
-            color: #ffffff;
-            background: red;
-            font-size: 20px;
-          }
-
-          .num_a:nth-child(7) {
-            background-color: #1C74AA;
-          }
-        }
-
-        .redballyes {
-          width: 100%;
-          height: 80px;
-          border: @border;
-
-          .red_text {
-            font-size: 20px;
-          }
-
-          .red_arr {
-            width: 100%;
-            height: 55px;
-            border: @border;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-
-            .red_ball {
-              width: 30px;
-              // height: 30px;
-              border: @border;
-              border-radius: 50%;
-              text-align: center;
-              line-height: 27px;
-              background-color: red;
-              color: #ffffff;
-            }
-          }
-        }
+        // background-color: #EAF4E5;
 
       }
 
-      .music {
+      .other_b {
         width: 48%;
         height: 240px;
         border: @border;
+        .getTime{
+          width: 100%;
+          height: 30px;
+          border:@border;
+          display: flex;
+          align-items: center;
+      }
+      .tuiTime{
+        width: 100%;
+          height: 30px;
+          border:@border;
+          display: flex;
+          align-items: center;
+      }
+        .ssq{
+          width: 100%;
+          height: 30px;
+          border: @border;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          
+          .ssq_num{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: red;
+            color: #fff;
+            line-height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+          }
+          .ssq_num:nth-child(8){
+            background-color: blue;
+          }
+         
+        }
+        .tuissq{
+          width: 100%;
+          border:@border;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          .tui_ball{
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 50%;
+            background-color: red;
+            color: #fff;
+          }
+        }
       }
     }
   }
