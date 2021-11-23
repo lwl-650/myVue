@@ -1,5 +1,6 @@
 import { RouteRecordRaw } from 'vue-router'
 import index from '../views/index/index.vue'
+import Consume from '../views/Tec/text/Consume/Consume.vue'
 
 const routes: Array<RouteRecordRaw> = [
 
@@ -8,6 +9,28 @@ const routes: Array<RouteRecordRaw> = [
     name: 'index',
     component: index,
   
+  },
+  {
+    path: '/text',
+    name: 'text',
+    component: () => import(/* webpackChunkName: "login" */ '../views/Tec/text/text.vue'),
+    beforeEnter: (to, from, next) => {
+        console.log('这是text独享守卫')
+        next()
+      },
+    //   redirect:'/Consume',  // 默认显示的子路由
+      children: [
+        {
+          path: 'Consume',//以“/”开头的嵌套路径会被当作根路径，所以子路由上不用加“/”;在生成路由时，主路由上的path会被自动添加到子路由之前，所以子路由上的path不用在重新声明主路由上的path了。
+          name: 'Consume',
+          component: Consume
+        },
+        {
+            path: 'js',
+            name: 'js',
+            component: () => import(/* webpackChunkName: "login" */ '../views/Tec/text/js/js.vue'),
+          },
+      ]
   },
   {
     path: '/login',
@@ -46,10 +69,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/javaScript_s',
     name: 'javaScript_s',
     component: () => import(/* webpackChunkName: "login" */ '../views/Tec/javaScript_s/javaScript_s.vue'),
-    beforeEnter: (to, from, next) => {
-        console.log('这是javaScript_s独享守卫')
-        next()
-      }
+    
 
   },
   {

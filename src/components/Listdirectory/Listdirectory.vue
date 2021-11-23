@@ -61,6 +61,7 @@ export default defineComponent({
         "http://q.vuetitle.lwlsl.top/1bd42c6a745540ff94cd146e2abe98ffa.png",
       ],
       items: [
+        { type: "", label: "text",goto:"text" },
         { type: "", label: "JavaScript",goto:"javaScript_s" },
         { type: "success", label: "Java",goto:"java_s" },
         { type: "info", label: "Php" ,goto:"php_s"},

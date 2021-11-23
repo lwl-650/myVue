@@ -1,6 +1,6 @@
 <template>
-  <div class="javaScript_s">
-   javascript
+  <div class="js">
+  js
   
   </div>
 </template>
@@ -9,8 +9,8 @@
 import { defineComponent ,reactive,toRefs} from 'vue';
 
 export default defineComponent({
-  name: 'javaScript_s',
-  
+  name: 'js',
+ 
   setup(){
     const data = reactive({
         id: 1,
@@ -23,7 +23,7 @@ export default defineComponent({
   }
 });
 </script>
-<style long="less"  scoped  src="./javaScript_s.css">
+<style long="less"  scoped >
    /* @import url("./index.less"); */
    /* h1{
      color: tomato;
