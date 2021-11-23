@@ -20,7 +20,9 @@
         </el-carousel>
       </div>
       <div class="other">
-          <div class="other_a"></div>
+          <div class="other_a">
+            
+          </div>
           <div class="other_b">
             <div class="getTime">
               <div>2021.11.22</div>

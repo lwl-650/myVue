@@ -5,3 +5,4 @@ declare module '*.vue' {
   export default component
 }
 declare module 'lodash.clonedeep'
+declare module 'vue-wechat-title'

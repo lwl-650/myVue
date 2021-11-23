@@ -7,6 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@moefe/vue-aplayer": "^2.0.0-beta.5",
     "@wangeditor/editor": "^0.12.4",
     "@wangeditor/editor-for-vue": "^5.1.6",
     "axios": "^0.24.0",
@@ -15,6 +16,8 @@
     "element-ui": "^2.15.6",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
+    "vue-tsx-support": "^3.2.0",
+    "vue-wechat-title": "^2.0.7",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {

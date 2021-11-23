@@ -1,8 +1,9 @@
 <template>
   <div id="nav">
-    <router-view/>
+    <!-- <router-view/> -->
     <!-- <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> -->
+    <router-view v-wechat-title='$route.meta.title'/>
   </div>
   
 </template>

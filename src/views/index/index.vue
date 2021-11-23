@@ -2,20 +2,24 @@
   <div class="index">
    <Title/>
    <Listdirectory/>
+   <Music/>
   <button type="default" @click="btn"> Button </button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent ,reactive,toRefs} from 'vue';
-import Title from "@/components/Title/Title.vue";
+import { defineComponent ,reactive,toRefs} from 'vue'
 import router from '@/router/index'
-import Listdirectory from "@/components/Listdirectory/Listdirectory.vue";
+import Title from "@/components/Title/Title.vue"
+import Music from "@/components/music/music.vue"
+
+import Listdirectory from "@/components/Listdirectory/Listdirectory.vue"
 export default defineComponent({
   name: 'index',
   components: {
     Title,
     Listdirectory,
+    Music,
   },
   setup(){
     const data = reactive({
