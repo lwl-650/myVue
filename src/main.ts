@@ -7,7 +7,7 @@ import "element-ui/lib/theme-chalk/index.css"
 
 
 
-import router from './router'
+import router from './router/index'
 import store from './store'
 
 

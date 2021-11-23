@@ -4,11 +4,11 @@
       <el-tag
         v-for="item in items"
         :key="item.label"
-        @click="chank"
+        @click="gourl(item.goto)"
         :type="item.type"
         effect="dark"
       >
-        {{ item.label }}
+     {{ item.label }}
       </el-tag>
     </div>
     <div class="downlist">
@@ -48,6 +48,7 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs,onMounted } from "vue";
 import demo from "./Listdirectory";
+import router from '@/router/index';
 export default defineComponent({
   name: "Listdirectory",
 
@@ -60,30 +61,32 @@ export default defineComponent({
         "http://q.vuetitle.lwlsl.top/1bd42c6a745540ff94cd146e2abe98ffa.png",
       ],
       items: [
-        { type: "", label: "JavaScript" },
-        { type: "success", label: "Java" },
-        { type: "info", label: "Php" },
-        { type: "danger", label: "Git" },
-        { type: "warning", label: "Css" },
-        { type: "", label: "Html" },
-        { type: "success", label: "Vue" },
-        { type: "info", label: "SpringBoot" },
-        { type: "danger", label: "Webpack" },
-        { type: "warning", label: "React" },
-        { type: "", label: "node.js" },
+        { type: "", label: "JavaScript",goto:"javaScript_s" },
+        { type: "success", label: "Java",goto:"java_s" },
+        { type: "info", label: "Php" ,goto:"php_s"},
+        { type: "danger", label: "Git" ,goto:"git_s"},
+        { type: "warning", label: "Css" ,goto:"css_s"},
+        { type: "", label: "Html",goto:"html_s" },
+        { type: "success", label: "Vue",goto:"vue_s" },
+        { type: "info", label: "SpringBoot" ,goto:"springboot_s"},
+        { type: "danger", label: "Webpack" ,goto:"webpack_s"},
+        { type: "warning", label: "React" ,goto:"react_s"},
+        { type: "", label: "node.js" ,goto:"nodejs_s"},
+        { type: "success", label: "Uniapp" ,goto:"uniapp_s"},
+        { type: "info", label: "Mysql" ,goto:"mysql_s"},
       ],
       redBall:[]as any[],
       ap:[1,4,6,14,20,28,2],
     });
    
-    console.log(demo.Sumsum(1,4,6,14,20,28).data)
-    console.log(demo.Sumvalueplustailsum(1,4,6,14,20,28).data)
-    console.log(demo.Summinuspolespacing(1,4,6,14,20,28).data)
-    console.log(demo.ACsumvalue(1,4,6,14,20,28).data)
+    // console.log(demo.Sumsum(1,4,6,14,20,28).data)
+    // console.log(demo.Sumvalueplustailsum(1,4,6,14,20,28).data)
+    // console.log(demo.Summinuspolespacing(1,4,6,14,20,28).data)
+    // console.log(demo.ACsumvalue(1,4,6,14,20,28).data)
    
     const methods = {
-      chank() {
-        console.log("fskjdfhskfhs");
+      gourl(url:string) {
+        router.push(url)
       },
       getssq(a: any, b: any, c: any, d: any, e: any, f: any){
         let Sumsum=demo.Sumsum(a,b,c,d,e,f)
@@ -104,11 +107,11 @@ export default defineComponent({
  
     };
     onMounted(() => {
-      console.log('mounted!')
+      // console.log('mounted!')
      methods.getssq(data.ap[0],data.ap[1],data.ap[2],data.ap[3],data.ap[4],data.ap[5])
     //  console.log(methods.getssq(data.ap[0],data.ap[1],data.ap[2],data.ap[3],data.ap[4],data.ap[5]))
     //  data.redBall=[...methods.getssq(data.ap[0],data.ap[1],data.ap[2],data.ap[3],data.ap[4],data.ap[5])]
-     console.log(data.redBall)
+    //  console.log(data.redBall)
     })
     return {
       ...toRefs(data),

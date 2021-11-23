@@ -1,6 +1,6 @@
 <template>
-  <div class="java_s">
-   java
+  <div class="mysql_s">
+   mysql
   
   </div>
 </template>
@@ -9,7 +9,7 @@
 import { defineComponent ,reactive,toRefs} from 'vue';
 
 export default defineComponent({
-  name: 'java_s',
+  name: 'mysql_s',
  
   setup(){
     const data = reactive({
@@ -23,7 +23,7 @@ export default defineComponent({
   }
 });
 </script>
-<style long="less"  scoped  src="./java_s.css">
+<style long="less"  scoped  src="./mysql_s.css">
    /* @import url("./index.less"); */
    /* h1{
      color: tomato;

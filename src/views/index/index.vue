@@ -2,13 +2,14 @@
   <div class="index">
    <Title/>
    <Listdirectory/>
-  
+  <button type="default" @click="btn"> Button </button>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent ,reactive,toRefs} from 'vue';
 import Title from "@/components/Title/Title.vue";
+import router from '@/router/index'
 import Listdirectory from "@/components/Listdirectory/Listdirectory.vue";
 export default defineComponent({
   name: 'index',
@@ -24,9 +25,14 @@ export default defineComponent({
         msg: "这是onMounted",
         btn: "",
       });
-      
+      const method={
+        btn(){
+            router.push("/css_s")
+        }
+      }
       return{
         ...toRefs(data),
+        ...method,
       }
   }
 });
