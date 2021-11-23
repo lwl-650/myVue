@@ -71,7 +71,6 @@ export default defineComponent({
         { type: "danger", label: "Webpack" },
         { type: "warning", label: "React" },
         { type: "", label: "node.js" },
-        { type: "success", label: "git" }
       ],
       redBall:[]as any[],
       ap:[1,4,6,14,20,28,2],
