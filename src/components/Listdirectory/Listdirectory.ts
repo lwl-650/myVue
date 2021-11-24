@@ -2,7 +2,6 @@
 let demo = {
     // 和值加和合
     Sumsum: function (a: any, b: any, c: any, d: any, e: any, f: any) {
-
         let tol: any = a + b + c + d + e + f
         let getbai: any = (a + b + c + d + e + f) / 100
         let getshi: any = (a + b + c + d + e + f) / 10

@@ -79,7 +79,7 @@ export default defineComponent({
         { type: "info", label: "Mysql" ,goto:"mysql_s"},
       ],
       redBall:[]as any[],
-      ap:[1,4,6,14,20,28,2],
+      ap:[Number("01"),Number("02"),Number("16"),Number("19"),Number("25"),Number("31"),Number("08")],
     });
    
     // console.log(demo.Sumsum(1,4,6,14,20,28).data)

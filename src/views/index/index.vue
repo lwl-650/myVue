@@ -2,8 +2,8 @@
   <div class="index">
    <Title/>
    <Listdirectory/>
-   <Music/>
-  <button type="default" @click="btn"> Button </button>
+   <!-- <Music/> -->
+  <Foot/>
   </div>
 </template>
 
@@ -13,6 +13,7 @@ import router from '@/router/index'
 import Title from "@/components/Title/Title.vue"
 import Music from "@/components/music/music.vue"
 
+import Foot from "@/components/foot/foot.vue"
 import Listdirectory from "@/components/Listdirectory/Listdirectory.vue"
 export default defineComponent({
   name: 'index',
@@ -20,6 +21,7 @@ export default defineComponent({
     Title,
     Listdirectory,
     Music,
+    Foot,
   },
   setup(){
     const data = reactive({
@@ -27,12 +29,10 @@ export default defineComponent({
         name: "zs",
         age: 12,
         msg: "这是onMounted",
-        btn: "",
+      
       });
       const method={
-        btn(){
-            router.push("/css_s")
-        }
+       
       }
       return{
         ...toRefs(data),
