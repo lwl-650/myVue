@@ -33,7 +33,7 @@
         <div class="right_c"></div>
         <el-button style="border:1px solid red;display:inline-block;font-size:16px;" class="bttn" size="mini" type="danger" icon="el-icon-caret-left" circle></el-button>
         <!-- <el-button style="border:1px solid red;display:inline-block;font-size:16px;" class="bttn" size="mini" type="danger" icon="el-icon-video-pause" circle></el-button> -->
-        <el-button style="border:1px solid red;display:inline-block;font-size:16px;" class="bttn" size="mini" type="danger" icon="el-icon-video-play" circle></el-button>
+        <el-button @click="play" style="border:1px solid red;display:inline-block;font-size:16px;" class="bttn" size="mini" type="danger" icon="el-icon-video-play" circle></el-button>
         <el-button style="border:1px solid red;display:inline-block;font-size:16px;" class="bttn" size="mini" type="danger" icon="el-icon-caret-right" circle></el-button>
         <el-button style="border:1px solid red;display:inline-block;font-size:16px;" class="bttn" size="mini" type="warning" icon="el-icon-refresh-right" circle></el-button>
         <el-button style="border:1px solid red;display:inline-block;font-size:16px;" class="bttn" size="mini" type="danger" icon="el-icon-s-operation" circle></el-button>
@@ -84,7 +84,7 @@ export default defineComponent({
         //  console.log(min + ':' + sec);
         data.ntime = nmin + ":" + nsec;
       },
-      k() {
+      play() {
         data.audio.play();
       },
       seeked() {
@@ -98,6 +98,8 @@ export default defineComponent({
         if (zmin < 10) zmin = "0" + zmin;
         if (zsec < 10) zsec = "0" + zsec;
         data.ztime = zmin + ":" + zsec;
+        
+        console.log(data.audio.volume,233)
       },
     };
     return {
@@ -168,7 +170,7 @@ export default defineComponent({
     }
   }
 }
-.el-icon-caret-left{
-  font-size: 30px !important;
-}
+// .el-icon-caret-left{
+//   font-size: 30px !important;
+// }
 </style>
