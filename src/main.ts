@@ -4,7 +4,7 @@ import App from './App.vue'
 
 import ElementPlus from 'element-plus'
 import "element-ui/lib/theme-chalk/index.css"
-
+// import 'element-plus/dist/index.css'
 
 
 import router from './router/index'
@@ -12,7 +12,7 @@ import store from './store'
 
 import VueWechatTitle from 'vue-wechat-title'//动态修改title
 
-import APlayer from '@moefe/vue-aplayer';
+
 
 
 
