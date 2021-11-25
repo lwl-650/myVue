@@ -4,7 +4,7 @@
       <el-tag
         v-for="item in items"
         :key="item.label"
-        @click="gourl(item.goto)"
+        @click.stop="gourl(item.goto)"
         :type="item.type"
         effect="dark"
       >
