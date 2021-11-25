@@ -11,7 +11,7 @@
       <div class="cent"></div>
       <div class="right">
         <div class="right_list" @click="goLogin">
-          <img @click="lookme" class="title_img" src="../../../public/img/B.png" alt="" />登录
+          <img @click="lookme"  @mouseenter="imgenter" @mouseleave="imgleave" class="title_img" src="../../../public/img/B.png" alt="" />登录
         </div>
         <div class="right_list" v-for="(item, index) in mylist" :key="index">
           {{ item.name }}

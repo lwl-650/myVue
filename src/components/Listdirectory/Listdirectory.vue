@@ -13,7 +13,7 @@
     </div>
     <div class="downlist">
       <div class="swip">
-        <el-carousel interval="3000" trigger="click">
+        <el-carousel interval="3000" trigger="click" indicator-position="outside">
           <el-carousel-item v-for="item in elimg" :key="item">
             <img class="el_img" :src="item" alt="" />
           </el-carousel-item>
@@ -39,6 +39,9 @@
               <div style="font-size:18px;font-weight: bold;font-size: 14px;">推荐红球{{redBall.length}}码：</div>
               <div class="tui_ball" v-for="item in redBall" :key="item">{{item}}</div>
               <div class="tui_ball" v-for="item in redBall" :key="item">{{item}}</div>
+            </div>
+            <div class="riqi">
+           
             </div>
           </div>
       </div>
@@ -80,6 +83,7 @@ export default defineComponent({
       ],
       redBall:[]as any[],
       ap:["01","02","16","19","25","31","08"],
+     
     });
    
     // console.log(demo.Sumsum(1,4,6,14,20,28).data)

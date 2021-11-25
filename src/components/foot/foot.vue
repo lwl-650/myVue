@@ -45,7 +45,7 @@ export default defineComponent({
 .foot {
   margin: 0 auto;
   width: 100vw;
-  min-width: 1100px;
+  min-width: 1300px;
   height: 260px;
   //   border: 1px solid red;
   position: relative;
