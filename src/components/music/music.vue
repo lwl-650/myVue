@@ -67,7 +67,9 @@ export default defineComponent({
         }
       ],
     });
-    onMounted(() => {});
+    onMounted(() => {
+      data.audio.volume =20/100
+    });
     const method = {
       updata() {
         // console.log("播放");

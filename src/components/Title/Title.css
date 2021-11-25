@@ -1,37 +1,31 @@
 .HeadTitle {
   color: #ffffff;
   width: 100%;
-  min-width: 1100px;
+  min-width: 1300px;
   height: 180px;
-  border: none;
-  position: relative;
+  border: 1px solid red;
 }
 .HeadTitle .HeadTitle_img {
   width: 100%;
-  min-width: 1100px;
+  min-width: 1300px;
   height: 180px;
   display: block;
 }
 .HeadTitle .head {
   width: 100%;
-  min-width: 1100px;
   height: 60px;
-  border: none;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  border: 1px solid red;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
 .HeadTitle .head .left {
-  width: 35%;
+  width: 620px;
   height: 60px;
-  border: none;
   display: flex;
   justify-content: space-evenly;
 }
 .HeadTitle .head .left .left_list {
-  border: none;
   width: 90px;
   text-align: center;
   line-height: 60px;
@@ -40,12 +34,12 @@
 .HeadTitle .head .cent {
   width: 30%;
   height: 60px;
-  border: none;
+  border: 1px solid red;
 }
 .HeadTitle .head .right {
-  width: 35%;
+  width: 620px;
   height: 60px;
-  border: none;
+  border: 1px solid red;
   display: flex;
   justify-content: space-evenly;
 }
@@ -55,7 +49,7 @@
   display: inline-block;
 }
 .HeadTitle .head .right .right_list {
-  border: none;
+  border: 1px solid red;
   width: 120px;
   height: 50px;
   text-align: center;

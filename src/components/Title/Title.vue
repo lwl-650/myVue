@@ -1,7 +1,8 @@
 <template>
   <div class="HeadTitle">
-    <img class="HeadTitle_img" src="../../../public/img/head.png" alt="" />
-    <div class="head">
+    <!-- <img class="HeadTitle_img" src="../../../public/img/head.png" alt="" /> -->
+    <div class="HeadTitle_img">
+<div class="head">
       <div class="left">
         <div class="left_list" v-for="(item, index) in list" :key="index">
           {{ item.name }}
@@ -10,7 +11,7 @@
       <div class="cent"></div>
       <div class="right">
         <div class="right_list" @click="goLogin">
-          <img class="title_img" src="../../../public/img/B.png" alt="" />登录
+          <img @click="lookme" class="title_img" src="../../../public/img/B.png" alt="" />登录
         </div>
         <div class="right_list" v-for="(item, index) in mylist" :key="index">
           {{ item.name }}
@@ -19,6 +20,8 @@
         </div>
       </div>
     </div>
+    </div>
+    
   </div>
 </template>
 
@@ -53,7 +56,9 @@ export default defineComponent({
           console.log("login")
           router.push('/login')
       },
-      
+      lookme(){
+        
+      }
     }
     onMounted(() => {
       // axios

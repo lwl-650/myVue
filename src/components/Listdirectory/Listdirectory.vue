@@ -79,7 +79,7 @@ export default defineComponent({
         { type: "info", label: "Mysql" ,goto:"mysql_s"},
       ],
       redBall:[]as any[],
-      ap:[Number("01"),Number("02"),Number("16"),Number("19"),Number("25"),Number("31"),Number("08")],
+      ap:["01","02","16","19","25","31","08"],
     });
    
     // console.log(demo.Sumsum(1,4,6,14,20,28).data)
@@ -111,7 +111,7 @@ export default defineComponent({
     };
     onMounted(() => {
       // console.log('mounted!')
-     methods.getssq(data.ap[0],data.ap[1],data.ap[2],data.ap[3],data.ap[4],data.ap[5])
+     methods.getssq(Number(data.ap[0]),Number(data.ap[1]),Number(data.ap[2]),Number(data.ap[3]),Number(data.ap[4]),Number(data.ap[5]))
     //  console.log(methods.getssq(data.ap[0],data.ap[1],data.ap[2],data.ap[3],data.ap[4],data.ap[5]))
     //  data.redBall=[...methods.getssq(data.ap[0],data.ap[1],data.ap[2],data.ap[3],data.ap[4],data.ap[5])]
     //  console.log(data.redBall)
