@@ -11,6 +11,19 @@ export function login(data:any) {
         data,
     })
 }
+// 登录
+export function ssq() {
+    return request({
+        url: '/getSsq',
+        method: 'post',
+    })
+}
+
+
+
+
+
+
 // 注册
 export function user(data:any) {
     return request({

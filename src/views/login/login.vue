@@ -33,6 +33,7 @@
 import { defineComponent, reactive, toRefs, getCurrentInstance } from "vue";
 import Title from "@/components/Title/Title.vue";
 import router from "@/router/index";
+import { login } from "@/http/api";
 import { ElMessage } from "element-plus";
 export default defineComponent({
   name: "login",
@@ -40,20 +41,36 @@ export default defineComponent({
     Title,
   },
   setup() {
-    // let { proxy } = getCurrentInstance();
+    let  proxy  = getCurrentInstance();
     const data = reactive({
       username: "zs",
       password: "123",
     });
     const methods = {
       sure() {
-        console.log("login");
-        router.push('/')
-        ElMessage({
-          message: "恭喜你，这是一条成功消息",
+        // console.log("login");
+console.log(proxy)
+        login({username:data.username,password:data.password}).then((res:any) => {
+        console.log(res);
+        if (res.code === 0) {
+       ElMessage({
+          message: res.msg,
           type: "success",
         });
+        router.push('/')
+        } else {
+         ElMessage({
+          message: res.msg,
+          type: "error",
+        });
+        }
+      })
+        
+        
       },
+
+      // console.log(qs.stringify(data))
+      
     };
     return {
       ...toRefs(data),

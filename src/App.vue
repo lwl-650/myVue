@@ -12,15 +12,15 @@ password: qq650610
     <router-link to="/about">About</router-link> -->
     <router-view v-wechat-title='$route.meta.title'/>
   </div>
-  
 </template>
 
 <style lang="less">
-*{
-  margin: 0;
+ *{
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  // margin: 0 auto;
 }
-
+#nav{
+ margin-bottom: -30px;
+}
 </style>

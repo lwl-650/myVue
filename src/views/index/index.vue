@@ -3,16 +3,21 @@
    <Title/>
    <Listdirectory/>
    <!-- <Music/> -->
+   <Alist/>
+
+
+
+
   <Foot/>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent ,reactive,toRefs} from 'vue'
-import router from '@/router/index'
+// import router from '@/router/index'
 import Title from "@/components/Title/Title.vue"
 import Music from "@/components/music/music.vue"
-
+import Alist from "@/components/alist/alist.vue"
 import Foot from "@/components/foot/foot.vue"
 import Listdirectory from "@/components/Listdirectory/Listdirectory.vue"
 export default defineComponent({
@@ -22,6 +27,7 @@ export default defineComponent({
     Listdirectory,
     Music,
     Foot,
+    Alist,
   },
   setup(){
     const data = reactive({

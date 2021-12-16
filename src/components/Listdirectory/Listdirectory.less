@@ -82,11 +82,14 @@
           border:@border;
           display: flex;
           align-items: center;
+          font-weight: bold;
+          
       }
       .tuiTime{
         width: 100%;
           height: 30px;
           border:@border;
+          font-weight: bold;
           display: flex;
           align-items: center;
       }
@@ -110,13 +113,16 @@
             text-align: center;
           }
           .ssq_num:nth-child(8){
-            background-color: blue;
+            background-color: #409EFF;
           }
          
         }
         .tuissq{
           width: 100%;
           border:@border;
+          margin: 5px 0;
+          // border-top: 5px solid gray;
+          // border-bottom: 5px solid gray;
           display: flex;
           flex-wrap: wrap;
           align-items: center;
@@ -131,6 +137,17 @@
             background-color: red;
             color: #fff;
           }
+        }
+        .gossq{
+          font-size: 30px;
+          font-weight: bold;
+          font-style: italic;
+          color: #909399;
+          margin-bottom: 0px;
+        }
+        .gossq:hover{
+          color: #409EFF;
+          cursor: pointer;
         }
       }
     }

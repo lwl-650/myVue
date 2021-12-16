@@ -44,10 +44,11 @@ export default defineComponent({
 <style lang="less" scoped>
 .foot {
   margin: 0 auto;
-  width: 100vw;
+  margin-bottom: 0px;
+  width: 100%;
   min-width: 1300px;
   height: 260px;
-  //   border: 1px solid red;
+  // border: 1px solid red;
   position: relative;
   background: #f6f9fa;
   .foot_bottom {
