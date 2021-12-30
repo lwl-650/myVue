@@ -4,7 +4,7 @@
     <div class="HeadTitle_img">
       <div class="head">
         <div class="left">
-          <div class="left_list" v-for="(item, index) in list" :key="index">
+          <div class="left_list" v-for="(item, index) in list" :key="index" @click="gourl(index)">
             {{ item.name }}
           </div>
         </div>
@@ -32,7 +32,7 @@
 </template>
 
 
-<script lang="ts">
+<script>
 import { defineComponent, reactive, toRefs, onMounted } from "vue";
 import router from "@/router/index";
 // import { ElInputNumber} from 'element-plus'
@@ -44,23 +44,31 @@ export default defineComponent({
     const data = reactive({
       list: [
         { name: "主页" },
-        { name: "番剧" },
-        { name: "直播" },
-        { name: "漫画" },
-        { name: "我的" },
-        { name: "小程序" },
+        { name: "星期一" },
+        { name: "星期二" },
+        { name: "星期三" },
+        { name: "星期四" },
+        { name: "星期五" },
       ],
       mylist: [
-        { name: "登录登录" },
-        { name: "登录登录" },
-        { name: "登录登录" },
-        { name: "登录登录" },
+        { name: "收藏" },
+        { name: "vscode" },
+        { name: "idea" },
+        { name: "其他" },
       ],
     });
     const methods = {
       goLogin() {
         console.log("login");
         router.push("/login");
+      },
+      gourl(index){
+        switch(index){
+          case 0:
+           router.push("/");
+           break
+        }
+    
       },
       lookme() {},
     };

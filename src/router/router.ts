@@ -164,6 +164,15 @@ const routes: Array<RouteRecordRaw> = [
             title: 'mysql'
         }
     },
+    {
+        path: '/videos',
+        name: 'videos',
+        component: () => import(/* webpackChunkName: "login" */ '@/views/videos/videos.vue'),
+        meta: {
+            title: 'videos'
+        }
+    },
+ 
 ]
 
 

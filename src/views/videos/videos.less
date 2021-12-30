@@ -1,0 +1,20 @@
+// @border:1px solid red;
+@border:none;
+
+
+.video_box{
+    width: 1300px;
+    height: 900px;
+    margin: 0 auto;
+    border: @border;
+    .video_vid{
+        width: 1000px;
+        height: 600px;
+        border: @border;
+        video:first-child{
+            width: 100%;
+            height:100%;
+            object-fit: fill;
+        }
+    }
+}

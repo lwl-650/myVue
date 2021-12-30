@@ -13,6 +13,7 @@ import store from './store'
 import VueWechatTitle from 'vue-wechat-title'//动态修改title
 
 
+import * as api from "./http/api"
 
 
 
@@ -25,6 +26,7 @@ const app=createApp(App)
 //     defaultCover: 'https://github.com/u3u.png',
 //     productionTip: true,
 //   });
+app.config.globalProperties.http=api
 
 app.use(VueWechatTitle)
 

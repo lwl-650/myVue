@@ -1,11 +1,11 @@
 <template>
   <div class="Listdirectory">
-    <div class="listR">
+    <div class="listR" @click.stop="gourl">
       <el-tag
         v-for="item in items"
         :key="item.label"
-        @click.stop="gourl(item.goto)"
         :type="item.type"
+        :data-url="item.gotourl"
         effect="dark"
       >
      {{ item.label }}
@@ -21,7 +21,15 @@
       </div>
       <div class="other">
           <div class="other_a">
-            222
+            <div class="swip">
+        <el-carousel height="220px" interval="3000" trigger="click" indicator-position="outside">
+          <el-carousel-item v-for="item in elimg" :key="item">
+            <img class="el_img" :src="item" alt="" />
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+            <!-- 222 -->
+            <!-- <a href="https://lol.qq.com/act/a20211213renamed/index.html" target="_target">英雄联盟改名</a> -->
           </div>
           <div class="other_b">
             <div class="getTime">
@@ -57,7 +65,7 @@
 import { defineComponent, reactive, toRefs,onMounted } from "vue";
 import demo from "./Listdirectory.js";
 import router from '@/router/index';
-import { ssq } from "@/http/api";
+import { ssq,getStu } from "@/http/api";
 export default defineComponent({
   name: "Listdirectory",
 
@@ -72,21 +80,20 @@ export default defineComponent({
         "http://q.vuetitle.lwlsl.top/1bd42c6a745540ff94cd146e2abe98ffa.png",
       ],
       items: [
-        { type: "", label: "text",goto:"text" },
-        { type: "", label: "JavaScript",goto:"javaScript_s" },
-        { type: "success", label: "Java",goto:"java_s" },
-        { type: "info", label: "Php" ,goto:"php_s"},
-        { type: "danger", label: "Git" ,goto:"git_s"},
-        { type: "warning", label: "Css" ,goto:"css_s"},
-        { type: "", label: "Html",goto:"html_s" },
-        { type: "success", label: "Vue",goto:"vue_s" },
-        { type: "info", label: "SpringBoot" ,goto:"springboot_s"},
-        { type: "danger", label: "Webpack" ,goto:"webpack_s"},
-        { type: "warning", label: "React" ,goto:"react_s"},
-
-        { type: "", label: "node.js" ,goto:"nodejs_s"},
-        { type: "success", label: "Uniapp" ,goto:"uniapp_s"},
-        { type: "info", label: "Mysql" ,goto:"mysql_s"},
+        // { type: "", label: "text",goto:"text" },
+        // { type: "", label: "JavaScript",goto:"javaScript_s" },
+        // { type: "success", label: "Java",goto:"java_s" },
+        // { type: "info", label: "Php" ,goto:"php_s"},
+        // { type: "danger", label: "git" ,goto:"git_s"},
+        // { type: "warning", label: "Css" ,goto:"css_s"},
+        // { type: "", label: "Html",goto:"html_s" },
+        // { type: "success", label: "Vue",goto:"vue_s" },
+        // { type: "info", label: "SpringBoot" ,goto:"springboot_s"},
+        // { type: "danger", label: "Webpack" ,goto:"webpack_s"},
+        // { type: "warning", label: "React" ,goto:"react_s"},
+        // { type: "", label: "node.js" ,goto:"nodejs_s"},
+        // { type: "success", label: "Uniapp" ,goto:"uniapp_s"},
+        // { type: "info", label: "Mysql" ,goto:"mysql_s"},
       ],
       redBall:[],
       beforBall:[],
@@ -95,8 +102,15 @@ export default defineComponent({
      
     });
     const methods = {
-      gourl(url) {
-        router.push(url)
+      gourl(e) {
+        console.log(e.target.dataset.url)
+        router.push(e.target.dataset.url)
+      },
+      getStu(){
+         getStu().then(res=>{
+           console.log(res)
+           data.items=res.data
+         })
       },
       goX_ssq(){
       window.open("https://datachart.500.com/ssq/")
@@ -135,7 +149,7 @@ export default defineComponent({
  
     };
     onMounted(() => {
-    //  proxy.http.getlun().then
+      methods.getStu()
     ssq().then(res=>{
       console.log(res)
       let obj=JSON.parse(res.data[0].ssqtext)

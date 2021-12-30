@@ -1,16 +1,24 @@
 .alist {
-  width: 1300px;
-  height: 900px;
-  margin: 20px auto;
-  border: 1px solid red;
-  display: flex;
+  height: 700px;
+  position: fixed;
+  top: 185px;
+  left: 150px;
+  z-index: 10;
 }
 .alist .left_url {
-  width: 300px;
+  padding-left: 10px;
+  width: 120px;
   height: 100%;
-  border: 1px solid red;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #cfc7c7;
 }
-.alist .left_url .url_list:hover {
-  color: chartreuse;
-  cursor: pointer;
+@media (max-width: 1700px) {
+  .alist {
+    left: 50px;
+  }
 }

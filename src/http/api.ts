@@ -18,8 +18,20 @@ export function ssq() {
         method: 'post',
     })
 }
-
-
+// 获取url跳转
+export function getGoUrl() {
+    return request({
+        url: '/getGoUrl',
+        method: 'post',
+    })
+}
+// 学习列表url
+export function getStu() {
+    return request({
+        url: '/getStu',
+        method: 'post',
+    })
+}
 
 
 

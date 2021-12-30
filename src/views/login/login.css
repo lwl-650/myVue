@@ -2,12 +2,12 @@
   width: 900px;
   height: 500px;
   margin: 0 auto;
-  border: 1px solid red;
+  border: none;
   display: flex;
   justify-content: space-between;
 }
 .take .login {
-  border: 1px solid red;
+  border: none;
   padding: 20px;
   width: 260px;
 }

@@ -10,7 +10,10 @@ password: qq650610
     <!-- <router-view/> -->
     <!-- <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> -->
-    <router-view v-wechat-title='$route.meta.title'/>
+    <keep-alive>
+<router-view v-wechat-title='$route.meta.title'/>
+    </keep-alive>
+    
   </div>
 </template>
 

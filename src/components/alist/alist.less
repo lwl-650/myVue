@@ -1,21 +1,31 @@
 
 // @flex:display:flex;
-@border:1px solid red;
+// @border:1px solid red;
+@border:none;
 .alist{
-    width: 1300px;
-    height: 900px;
-    margin: 20px auto;
-    border: 1px solid red;
-    display: flex;
-    .left_url{
-        width: 300px;
-        height: 100%;
-        border: @border;
-        .url_list:hover{
-            color:chartreuse;
-            cursor: pointer;
-        }
-    }
-
+    // width: 1300px;
     
+    height: 700px;
+    position: fixed;
+    top: 185px;
+    left: 150px;
+    z-index: 10;
+   
+    .left_url{
+        padding-left: 10px;
+        width: 120px;
+        height: 100%;
+        font-weight: 600;
+        border-radius: 10px;
+        border: @border;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+        background-color: rgb(207, 199, 199);
+    }
 }
+@media (max-width: 1700px) {
+    .alist{
+        left: 50px;
+    }
+  }

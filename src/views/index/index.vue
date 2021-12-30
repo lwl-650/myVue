@@ -3,7 +3,13 @@
    <Title/>
    <Listdirectory/>
    <!-- <Music/> -->
-   <Alist/>
+   <Player></Player>
+ <Alist>
+    <template #aurl="slotProps">
+       <el-tag style="cursor: pointer" :data-url="slotProps.item.url" :type="slotProps.item.type">
+         {{slotProps.item.title}}</el-tag>
+     </template>
+ </Alist>
 
 
 
@@ -12,13 +18,14 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent ,reactive,toRefs} from 'vue'
+<script>
+import { defineComponent ,reactive,toRefs,onMounted} from 'vue'
 // import router from '@/router/index'
 import Title from "@/components/Title/Title.vue"
 import Music from "@/components/music/music.vue"
 import Alist from "@/components/alist/alist.vue"
 import Foot from "@/components/foot/foot.vue"
+import Player from "@/components/player/player.vue"
 import Listdirectory from "@/components/Listdirectory/Listdirectory.vue"
 export default defineComponent({
   name: 'index',
@@ -28,6 +35,7 @@ export default defineComponent({
     Music,
     Foot,
     Alist,
+    Player
   },
   setup(){
     const data = reactive({
@@ -35,14 +43,17 @@ export default defineComponent({
         name: "zs",
         age: 12,
         msg: "这是onMounted",
+        urllist: [],
       
       });
-      const method={
-       
+    onMounted(()=>{
+    })
+      const methods={
+     
       }
       return{
         ...toRefs(data),
-        ...method,
+        ...methods,
       }
   }
 });
