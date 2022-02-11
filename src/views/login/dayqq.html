@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript"src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <button class="btn">Step1：获取Authorization Code</button>
+   <button class="btn2">btn2</button>
+   <button class="btn3">btn3</button>
+   <button class="btn4">Step2：通过Authorization Code获取Access Token</button>
+   <button class="btn5">获取用户OpenID_OAuth2.0</button>
+   <button class="btn6">获取用户xx</button>
+ <script>
+    //  access_token=C383B83129E01164289E1BD7579E336A
+    // expires_in=7776000
+    // refresh_token=5A5AFA83129BE1E5A5D290C957623A7A
+    // callback( {"client_id":"101990958","openid":"ADD2B3D28B83FABD2EC9286C4F8D9FB8"} );
+     $(function(){
+        $(".btn3").click(function(){
+            window.open("https://www.lwlsl.top/?get=getcode")
+         })
+         $(".btn2").click(function(){
+            window.open("https://www.lwlsl.top/?code=B70783929E39FCF2A53BDF0B6E755F53&state=state")
+         })
+         $(".btn").click(function(){
+            
+            console.log(encodeURIComponent("https://www.lwlsl.top/?get=getcode"))
+
+            // https://graph.qq.com/oauth2.0/show?which=Login&display=pc&client_id=100330589&response_type=token&scope=all&redirect_uri=https%3A%2F%2Fconnect.qq.com%2Fsdk%2Fwebtools%2Findex2.html   
+            window.open("https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101990958&redirect_uri=https%3A%2F%2Fwww.lwlsl.top%2F%3Fget%3Dgetcode&state=state")
+
+            
+         })
+         $(".btn4").click(function(){
+            window.open("https://graph.qq.com/oauth2.0/token?grant_type=authorization_code&client_id=101990958&client_secret=37e96358312d327ef646afe83e7337eb&code=A478A39D03E04A04B5FCE6316863D7E6&redirect_uri=https%3A%2F%2Fwww.lwlsl.top%2Flogin")
+         })
+         $(".btn5").click(function(){
+            window.open("https://graph.qq.com/oauth2.0/me?access_token=C383B83129E01164289E1BD7579E336A")
+         })
+         $(".btn6").click(function(){
+            window.open("https://graph.qq.com/user/get_user_info?access_token=C383B83129E01164289E1BD7579E336A&oauth_consumer_key=101990958&openid=ADD2B3D28B83FABD2EC9286C4F8D9FB8")
+         })
+         
+    })
+         
+ </script>
+
+</body>
+</html>

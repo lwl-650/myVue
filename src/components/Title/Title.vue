@@ -59,7 +59,7 @@ export default defineComponent({
     });
     const methods = {
       goLogin() {
-        console.log("login");
+        // console.log("login");
         router.push("/login");
       },
       gourl(index){

@@ -32,6 +32,68 @@ export function getStu() {
         method: 'post',
     })
 }
+// 获取端口
+export function prot() {
+    return request({
+        url: '/prot',
+        method: 'post',
+    })
+}
+// 所有videos
+export function allVid() {
+    return request({
+        url: '/allVid',
+        method: 'post',
+    })
+}
+// 或取单个video
+export function findByVid(data:any) {
+    return request({
+        url: '/findByVid',
+        method: 'post',
+        data,
+    })
+}
+// 通过vid获取视频下面的评论
+export function getByVid(data:Object) {
+    return request({
+        url: '/getByVid',
+        method: 'post',
+        data,
+    })
+}
+// 查询回复通过评论id
+export function findAllAns(data:Object) {
+    return request({
+        url: '/findAllAns',
+        method: 'post',
+        data,
+    })
+}
+// 新增评论
+export function addReply(data:Object) {
+    return request({
+        url: '/addReply',
+        method: 'post',
+        data,
+    })
+}
+// 删除Reply
+export function delReply(data:Object) {
+    return request({
+        url: '/delReply',
+        method: 'post',
+        data,
+    })
+}
+// qq登录
+export function qqlogin(data:Object) {
+    return request({
+        url: '/qqlogin',
+        method: 'post',
+        data,
+    })
+}
 
 
 

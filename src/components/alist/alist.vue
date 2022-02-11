@@ -39,7 +39,7 @@ export default defineComponent({
       },
      getGoUrls(){
        proxy.http.getGoUrl().then(res=>{
-           console.log(res)
+          //  console.log(res)
            data.urllist=res.data
          })
      }

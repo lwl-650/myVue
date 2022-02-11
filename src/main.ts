@@ -2,9 +2,11 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 
-import ElementPlus from 'element-plus'
+// import ElementPlus from 'element-plus'
 import "element-ui/lib/theme-chalk/index.css"
+import { components, plugins } from './plugins/element'
 // import 'element-plus/dist/index.css'
+// import 'element-plus/packages/theme-chalk/src/base.scss'
 
 
 import router from './router/index'
@@ -20,6 +22,16 @@ import * as api from "./http/api"
 
 
 const app=createApp(App)
+
+// 按需导入Element Plus组件和插件
+
+components.forEach(component => {
+    app.component(component.name, component)
+  })
+  plugins.forEach(plugin => {
+    app.use(plugin)
+  })
+
 // import { Button, Select } from 'element-ui';
 // app.component(Button.name, Button)
 // app.use<APlayer.InstallOptions>(APlayer, {
@@ -32,5 +44,6 @@ app.use(VueWechatTitle)
 
 app.use(store)
 app.use(router)
-app.use(ElementPlus)
+
+
 app.mount('#app')

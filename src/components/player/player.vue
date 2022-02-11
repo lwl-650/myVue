@@ -1,12 +1,12 @@
 <template>
   <div class="player">
     <div class="left">
-      <video preload="auto" controls src="http://q.vuevideo.lwlsl.top/km.mp4"></video>
+      <video preload="auto" controls :src="bigUrl.vurl"></video>
     </div>
     <div class="right" @click="govideo">
       <div class="vid_item" v-for="item in vlist" :key="item.vtext">
-           <img :src="item.url" data-vid="00" alt="">
-           <div class="img_text" data-vid="00">
+           <img :src="item.vurl" :data-vid="item.vid" alt="">
+           <div class="img_text" :data-vid="item.vid">
             {{item.vtext}}
            </div>
       </div>
@@ -21,6 +21,7 @@
 <script>
 import { defineComponent, reactive, toRefs ,getCurrentInstance, onMounted} from "vue";
 import router from "@/router/index";
+import {allVid} from "@/http/api";
 export default defineComponent({
   name: "alist",
 
@@ -28,38 +29,25 @@ export default defineComponent({
      const { proxy  } = getCurrentInstance();
     const data = reactive({
         publicPath: process.env.BASE_URL,
-        vlist:[
-          {url:"http://q.vuetitle.lwlsl.top/1bd42c6a745540ff94cd146e2abe98ffa.png",
-          vtext:"这是视频"
-          },
-          {url:"http://q.vuetitle.lwlsl.top/1bd42c6a745540ff94cd146e2abe98ffa.png",
-          vtext:"这是视频"
-          },
-          {url:"http://q.vuetitle.lwlsl.top/1bd42c6a745540ff94cd146e2abe98ffa.png",
-          vtext:"这是视频"
-          },
-          {url:"http://q.vuetitle.lwlsl.top/1bd42c6a745540ff94cd146e2abe98ffa.png",
-          vtext:"这是视频"
-          },
-          {url:"http://q.vuetitle.lwlsl.top/1bd42c6a745540ff94cd146e2abe98ffa.png",
-          vtext:"这是视频"
-          },
-          {url:"http://q.vuetitle.lwlsl.top/1bd42c6a745540ff94cd146e2abe98ffa.png",
-          vtext:"这是视频"
-          },
-          {url:"http://q.vuetitle.lwlsl.top/1bd42c6a745540ff94cd146e2abe98ffa.png",
-          vtext:"这是视频"
-          },
-           {url:"http://q.vuetitle.lwlsl.top/1bd42c6a745540ff94cd146e2abe98ffa.png",
-          vtext:"这是视频"
-          },
-        ]
+        bigUrl:"",
+        vlist:[]
     });
      onMounted(()=>{
        console.log(data.publicPath)
+       methods.allVid()
     })
     
     const methods = {
+      allVid(){
+allVid().then(res=>{
+  console.log(res.data)
+  data.bigUrl=res.data.shift()
+  data.vlist=res.data
+  console.log(res.data)
+  console.log(data.bigUrl)
+  console.log(data.vlist)
+})
+      },
       govideo(e){
         console.log(e.target.dataset.vid)
           router.push({

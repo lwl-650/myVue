@@ -25,6 +25,7 @@ axios.interceptors.request.use(
     (config:any) => {
         // config.headers['Content-Type'] = 'application/json;charset=UTF-8'
         config.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'
+        config.headers['token'] =localStorage.getItem("token")
         return config
     },
     error => {

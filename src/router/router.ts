@@ -1,6 +1,8 @@
+
 import { RouteRecordRaw } from 'vue-router'
 import index from '../views/index/index.vue'
 import Consume from '../views/Tec/text/Consume/Consume.vue'
+import login from '../views/login/login.vue'
 
 const routes: Array<RouteRecordRaw> = [
 
@@ -46,7 +48,8 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/login',
         name: 'login',
-        component: () => import(/* webpackChunkName: "login" */ '../views/login/login.vue'),
+        // component: () => import(/* webpackChunkName: "login" */ '../views/login/login.vue'),
+        component:login,
         meta: {
             title: 'login'
         },
