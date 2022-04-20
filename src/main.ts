@@ -13,7 +13,8 @@ import router from './router/index'
 import store from './store'
 
 import VueWechatTitle from 'vue-wechat-title'//动态修改title
-
+// main.js
+import 'lib-flexible'
 
 import * as api from "./http/api"
 
